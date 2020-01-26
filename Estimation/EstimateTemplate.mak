@@ -1,6 +1,6 @@
-BOOST = "/boostdirectory/boost/boost_1_55_0" #directory for boost library
+BOOST = "/usr/include/boost" #directory for boost library
 LIB64 = "/usr/lib64" #64 bit lib
-STD64 = "/usr/lib/gcc/x86_64-redhat-linux/4.4.6" #64 bit std
+STD64 = "/usr/lib/gcc/x86_64-linux-gnu/7.4.0" #64 bit std
 #release variables
 FLAGS = -O3 -DNDEBUG -DBOOST_SYSTEM_STATIC_LINK=1 -DBOOST_THREAD_USE_LIB=1 -DDATE_TIME_INLINE
 LINKING = -L$(BOOST) -lboost_thread -lboost_random -lboost_system -L$(LIB64) -lpthread -lrt -L$(STD64) -lstdc++
@@ -8,7 +8,7 @@ LINKING = -L$(BOOST) -lboost_thread -lboost_random -lboost_system -L$(LIB64) -lp
 SOURCES = main.cpp RandomSingleton.cpp global.cpp
 INCLUDES = -I$(BOOST)
 
-EXECUTABLE = Estimate.exe
+EXECUTABLE = Estimate
 OBJ_DIR = objects
 
 .PHONY: all clean
@@ -34,4 +34,4 @@ $(OBJECTS):
 
 clean:
 	del $(OBJ_DIR)
-	del $(EXECUTABLE).exe
+	del $(EXECUTABLE)

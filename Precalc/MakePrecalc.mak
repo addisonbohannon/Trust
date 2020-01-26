@@ -34,4 +34,4 @@ $(OBJECTS):
 
 clean:
 	del $(OBJ_DIR)
-	del $(EXECUTABLE).exe
+	del $(EXECUTABLE)

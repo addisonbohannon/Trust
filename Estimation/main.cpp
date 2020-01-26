@@ -1934,7 +1934,7 @@ int main(int argc, char* argv[])
 		correction_factors[0][t+1]=0;	
 	}					
 		
-	ifstream infile ("saved_0_3_investor_high_large.bin", ios::in | ios::binary);//load precalculated level 0 investor with 3 belief states
+	ifstream infile ("../Precalc/saved_0_3_investor_high_large.bin", ios::in | ios::binary);//load precalculated level 0 investor with 3 belief states
 	infile.seekg (0, ios::beg);	//beginning of file
 	char * memblock; //point to a large enough memory block
 	memblock= new char[1209604504];		//create a large enough memory block
